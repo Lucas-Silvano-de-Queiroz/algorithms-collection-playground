@@ -8,7 +8,7 @@
  * Time complexity: O(n) where n is the number of elements in the array.
  * Space complexity: O(1).
  *
- * @param {Array} arr - The array to search through. Can contain elements of any type.
+ * @param {Array} list - The array to search through. Can contain elements of any type.
  * @param {*} target - The element to search for in the array. Can be of any type.
  * @returns {number} The index of the target element if found, or -1 if the target is not in the array.
  *
@@ -23,9 +23,9 @@
  * const resultNotFound = linearSearch(numbers, targetNotFound);
  * console.log(resultNotFound); // Output: -1
  */
-function linearSearch(arr, target) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === target) {  // Strict comparison
+function linearSearch(list, target) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] === target) {  // Strict comparison
             return i;  // Returns the index of the found element
         }
     }

@@ -11,7 +11,7 @@
  *
  * **Important:** The array must be sorted in ascending order for the binary search algorithm to work correctly.
  *
- * @param {number[]} arr - A sorted array of numbers where the search will be performed.
+ * @param {number[]} list - A sorted array of numbers where the search will be performed.
  * @param {number} target - The number being searched for in the array.
  * @returns {number} The index of the target element if found, or -1 if the target is not found.
  *
@@ -26,13 +26,13 @@
  * const resultNotFound = binarySearch(sortedArray, notFoundTarget);
  * console.log(resultNotFound); // Output: -1
  */
-function binarySearch(arr, target) {
+function binarySearch(list, target) {
     let low = 0;
-    let high = arr.length - 1;
+    let high = list.length - 1;
 
     while (low <= high) {
         const mid = Math.floor((low + high) / 2); // Calculate mid-point
-        const guess = arr[mid];
+        const guess = list[mid];
 
         if (guess === target) {
             return mid;  // Return the index if target is found
