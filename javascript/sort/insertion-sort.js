@@ -8,7 +8,7 @@
  * Time complexity: O(n^2) in the worst and average cases. O(n) in the best case (already sorted array).
  * Space complexity: O(1) (in-place sorting).
  *
- * @param {number[]} list - The array of numbers to be sorted.
+ * @param {number[]} arr - The array of numbers to be sorted.
  * @returns {number[]} The sorted array.
  *
  * @example
@@ -17,20 +17,20 @@
  * const sortedArray = insertionSort(unsortedArray);
  * console.log(sortedArray); // Output: [1, 2, 5, 5, 6, 9]
  */
-function insertionSort(list) {
+function insertionSort(arr) {
 
-  for (let i = 1; i < list.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
 
-      let key = list[i];
+      let key = arr[i];
       let j = i - 1;
 
       // Shift elements of arr[0..i-1], that are greater than key, to one position ahead of their current position
-      while (j >= 0 && list[j] > key) {
-        list[j + 1] = list[j];
+      while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
           j--;
       }
-      list[j + 1] = key;
+      arr[j + 1] = key;
   }
 
-  return list;
+  return arr;
 }
